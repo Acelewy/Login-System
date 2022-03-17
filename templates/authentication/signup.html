@@ -9,7 +9,7 @@
 <body>
     <h3>Sign Up</h3>
     <form action="/signup" method="post">
-    {% csrf_token %}
+        {% csrf_token %}
         <label for="">Username</label>
         <input type="text" id="username" name="username" placeholder="Create A Username(letters and numbers only)" Required> 
         <br>
@@ -33,7 +33,7 @@
         <label for="">Confirm your password</label>
         <input type="password" id="pass2" name="pass2" placeholder="Confirm Your Password" Required> 
         <br>
-        
+
         <button type="submit">Sign Up</button>
     </form>
 </body>

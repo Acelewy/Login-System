@@ -24,10 +24,11 @@ def signup(request):
         myuser.last_name =lname
 
         myuser.save()
+        print(myuser)
 
         messages.success(request,"Your Account Has Been Successfully Created!")
 
-        return redirect("signin")
+        return redirect('signin')
 
     return render(request, "authentication/signup.html")
 
@@ -35,6 +36,7 @@ def signin(request):
     if request.method == "POST" :
         username = request.POST["username"]
         pass1 = request.POST['pass1']
+        #pass1 = 'pass1' in request.POST
 
         user = authenticate(username=username, password=pass1)
 
